@@ -1,0 +1,243 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: AgeCalc
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target AgeCalc
+
+
+#############################################
+# Order-only phony target for AgeCalc
+
+build cmake_object_order_depends_target_AgeCalc: phony || AgeCalc_autogen AgeCalc_autogen/mocs_compilation.cpp AgeCalc_autogen/timestamp AgeCalc_autogen_timestamp_deps
+
+build CMakeFiles/AgeCalc.dir/AgeCalc_autogen/mocs_compilation.cpp.o: CXX_COMPILER__AgeCalc_Debug /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/AgeCalc_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_AgeCalc
+  DEFINES = -DQT_CORE_LIB
+  DEP_FILE = CMakeFiles/AgeCalc.dir/AgeCalc_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++17
+  INCLUDES = -I/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/AgeCalc_autogen/include -isystem /Users/kelvin/Qt/6.4.1/macos/lib/QtCore.framework/Headers -iframework /Users/kelvin/Qt/6.4.1/macos/lib -isystem /Users/kelvin/Qt/6.4.1/macos/mkspecs/macx-clang -isystem /Users/kelvin/Qt/6.4.1/macos/include
+  OBJECT_DIR = CMakeFiles/AgeCalc.dir
+  OBJECT_FILE_DIR = CMakeFiles/AgeCalc.dir/AgeCalc_autogen
+
+build CMakeFiles/AgeCalc.dir/agecalc.cpp.o: CXX_COMPILER__AgeCalc_Debug /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/AgeCalc/agecalc.cpp || cmake_object_order_depends_target_AgeCalc
+  DEFINES = -DQT_CORE_LIB
+  DEP_FILE = CMakeFiles/AgeCalc.dir/agecalc.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++17
+  INCLUDES = -I/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/AgeCalc_autogen/include -isystem /Users/kelvin/Qt/6.4.1/macos/lib/QtCore.framework/Headers -iframework /Users/kelvin/Qt/6.4.1/macos/lib -isystem /Users/kelvin/Qt/6.4.1/macos/mkspecs/macx-clang -isystem /Users/kelvin/Qt/6.4.1/macos/include
+  OBJECT_DIR = CMakeFiles/AgeCalc.dir
+  OBJECT_FILE_DIR = CMakeFiles/AgeCalc.dir
+
+build CMakeFiles/AgeCalc.dir/main.cpp.o: CXX_COMPILER__AgeCalc_Debug /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/AgeCalc/main.cpp || cmake_object_order_depends_target_AgeCalc
+  DEFINES = -DQT_CORE_LIB
+  DEP_FILE = CMakeFiles/AgeCalc.dir/main.cpp.o.d
+  FLAGS = -DQT_QML_DEBUG -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++17
+  INCLUDES = -I/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/AgeCalc_autogen/include -isystem /Users/kelvin/Qt/6.4.1/macos/lib/QtCore.framework/Headers -iframework /Users/kelvin/Qt/6.4.1/macos/lib -isystem /Users/kelvin/Qt/6.4.1/macos/mkspecs/macx-clang -isystem /Users/kelvin/Qt/6.4.1/macos/include
+  OBJECT_DIR = CMakeFiles/AgeCalc.dir
+  OBJECT_FILE_DIR = CMakeFiles/AgeCalc.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target AgeCalc
+
+
+#############################################
+# Link the executable AgeCalc
+
+build AgeCalc: CXX_EXECUTABLE_LINKER__AgeCalc_Debug CMakeFiles/AgeCalc.dir/AgeCalc_autogen/mocs_compilation.cpp.o CMakeFiles/AgeCalc.dir/agecalc.cpp.o CMakeFiles/AgeCalc.dir/main.cpp.o | /Users/kelvin/Qt/6.4.1/macos/lib/QtCore.framework/Versions/A/QtCore || AgeCalc_autogen AgeCalc_autogen_timestamp_deps
+  FLAGS = -DQT_QML_DEBUG -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+  LINK_LIBRARIES = -Wl,-rpath,/Users/kelvin/Qt/6.4.1/macos/lib  /Users/kelvin/Qt/6.4.1/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration
+  LINK_PATH = -F/Users/kelvin/Qt/6.4.1/macos/lib
+  OBJECT_DIR = CMakeFiles/AgeCalc.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = AgeCalc
+  TARGET_PDB = AgeCalc.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug && /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/bin/ccmake -S/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/AgeCalc -B/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug
+  DESC = Running CMake cache editor...
+  pool = console
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug && /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/bin/cmake --regenerate-during-build -S/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/AgeCalc -B/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug && /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug && /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug && /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+
+#############################################
+# Utility command for AgeCalc_autogen_timestamp_deps
+
+build AgeCalc_autogen_timestamp_deps: phony CMakeFiles/AgeCalc_autogen_timestamp_deps
+
+
+#############################################
+# Utility command for AgeCalc_autogen
+
+build AgeCalc_autogen: phony CMakeFiles/AgeCalc_autogen AgeCalc_autogen/timestamp AgeCalc_autogen/mocs_compilation.cpp AgeCalc_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for AgeCalc_autogen/timestamp
+
+build AgeCalc_autogen/timestamp AgeCalc_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}AgeCalc_autogen/timestamp ${cmake_ninja_workdir}AgeCalc_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /Users/kelvin/Qt/6.4.1/macos/./libexec/moc || AgeCalc_autogen_timestamp_deps
+  COMMAND = cd /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug && /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/AgeCalc_autogen.dir/AutogenInfo.json Debug && /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E touch /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/AgeCalc_autogen/timestamp && /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/AgeCalc /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/AgeCalc /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/AgeCalc_autogen/deps /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/d/0a6bf943e2e2622f9622f4c4ea8cea9a0fdfff197c25d738877a0c093418af1b.d
+  DESC = Automatic MOC and UIC for target AgeCalc
+  depfile = /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/d/0a6bf943e2e2622f9622f4c4ea8cea9a0fdfff197c25d738877a0c093418af1b.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for CMakeFiles/AgeCalc_autogen_timestamp_deps
+
+build CMakeFiles/AgeCalc_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/AgeCalc_autogen_timestamp_deps: phony /Users/kelvin/Qt/6.4.1/macos/./libexec/moc /Users/kelvin/Qt/6.4.1/macos/lib/QtCore.framework/Versions/A/QtCore
+
+
+#############################################
+# Phony custom command for CMakeFiles/AgeCalc_autogen
+
+build CMakeFiles/AgeCalc_autogen | ${cmake_ninja_workdir}CMakeFiles/AgeCalc_autogen: phony AgeCalc_autogen/timestamp || AgeCalc_autogen_timestamp_deps
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug
+
+build all: phony AgeCalc
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/AgeCalc/CMakeLists.txt /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/FindWrapAtomic.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6Config.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6ConfigExtras.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6ConfigVersion.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6Dependencies.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6Targets.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtFeature.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtFeatureCommon.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicAppleHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicTestHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicToolHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckIncludeFileCXX.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Clang.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/GNU.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindPackageMessage.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindThreads.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/GNUInstallDirs.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/AgeCalc/CMakeLists.txt /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/FindWrapAtomic.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6Config.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6ConfigExtras.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6ConfigVersion.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6Dependencies.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6Targets.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/Qt6VersionlessTargets.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtFeature.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtFeatureCommon.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicAppleHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicCMakeHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicPluginHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicTargetHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicTestHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicToolHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreConfig.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreMacros.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreTargets.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /Users/kelvin/Qt/6.4.1/macos/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCXXCompilerFlag.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckCXXSourceCompiles.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckIncludeFileCXX.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/Clang.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Compiler/GNU.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindPackageMessage.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/FindThreads.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/GNUInstallDirs.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckCompilerFlag.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckFlagCommonConfig.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/Darwin.cmake /Users/kelvin/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean additional files.
+
+build CMakeFiles/clean.additional: CLEAN_ADDITIONAL
+  CONFIG = Debug
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN CMakeFiles/clean.additional
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

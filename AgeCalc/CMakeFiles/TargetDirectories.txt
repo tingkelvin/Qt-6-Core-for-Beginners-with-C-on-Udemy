@@ -1,0 +1,9 @@
+/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/AgeCalc.dir
+/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/edit_cache.dir
+/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/rebuild_cache.dir
+/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/list_install_components.dir
+/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/install.dir
+/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/install/local.dir
+/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/install/strip.dir
+/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/AgeCalc_autogen_timestamp_deps.dir
+/Users/kelvin/Dev/Qt-6-Core-for-Beginners-with-C-on-Udemy/build-AgeCalc-Qt_6_4_1_for_macOS-Debug/CMakeFiles/AgeCalc_autogen.dir
